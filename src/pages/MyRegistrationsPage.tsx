@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import type { AppDispatch, RootState } from "../store/store";
-import { setRegistrations } from "../store/registrationsSlice";
+import React from "react";
+import { useSelector } from "react-redux";
+import type { RootState } from "@/store/store";
 
 const MyRegistrationsPage: React.FC = () => {
   const registrations = useSelector(

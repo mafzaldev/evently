@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import type { RootState, AppDispatch } from "../store/store";
+import type { RootState, AppDispatch } from "@/store/store";
 import {
   DndContext,
   closestCenter,
@@ -16,7 +16,7 @@ import {
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
 import SortableEventCard from "./SortableEventCard";
-import { setOrder } from "../store/eventsSlice";
+import { setOrder } from "@/store/eventsSlice";
 
 const EventList: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();

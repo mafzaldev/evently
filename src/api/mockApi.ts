@@ -1,4 +1,4 @@
-import type { Event, Registration } from "../lib/types";
+import type { Event, Registration } from "@/lib/interfaces";
 
 const mockEvents: Event[] = [
   {

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import type { AppDispatch, RootState } from "../store/store";
-import { addRegistration } from "../store/registrationsSlice";
-import { registerForEvent } from "../api/mockApi";
+import type { AppDispatch, RootState } from "@/store/store";
+import { addRegistration } from "@/store/registrationsSlice";
+import { registerForEvent } from "@/api/mockApi";
 
 const RegistrationForm: React.FC = () => {
   const { eventId } = useParams<{ eventId: string }>();

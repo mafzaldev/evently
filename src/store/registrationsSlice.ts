@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import type { RegistrationsState, Registration } from "../lib/interfaces";
-import type { AppDispatch } from "../store/store";
-import { LOCAL_STORAGE_KEYS } from "../lib/storageKeys";
+import type { RegistrationsState, Registration } from "@/lib/interfaces";
+import type { AppDispatch } from "@/store/store";
+import { LOCAL_STORAGE_KEYS } from "@/lib/storageKeys";
 
 const initialState: RegistrationsState = {
   registrations: [],

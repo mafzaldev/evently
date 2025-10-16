@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import type { Event } from "../lib/types";
-import type { AppDispatch } from "../store/store";
-import { fetchEvents } from "../api/mockApi";
-import { LOCAL_STORAGE_KEYS } from "../lib/storageKeys";
+import type { Event } from "@/lib/interfaces";
+import type { AppDispatch } from "@/store/store";
+import { fetchEvents } from "@/api/mockApi";
+import { LOCAL_STORAGE_KEYS } from "@/lib/storageKeys";
 
 const LOCAL_STORAGE_KEY = LOCAL_STORAGE_KEYS.EVENTS;
 

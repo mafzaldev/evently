@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import type { Event } from "../lib/types";
+import type { Event } from "@/lib/interfaces";
 import { GripVertical } from "lucide-react";
 
 interface Props {
