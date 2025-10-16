@@ -70,7 +70,7 @@ const RegistrationForm: React.FC = () => {
 
   return (
     <div className="max-w-md mx-auto p-4">
-      <h2 className="text-xl font-bold mb-6">Register for {event.name}</h2>
+      <h1 className="text-2xl font-bold mb-4">Register for {event.name}</h1>
       <form className="space-y-4" onSubmit={handleSubmit}>
         <InputField
           label="Name"

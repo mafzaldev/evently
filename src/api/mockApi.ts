@@ -22,7 +22,7 @@ export const fetchEvents = async (): Promise<Event[]> => {
 };
 
 export const registerForEvent = async (
-  registration: Registration
+  _: Registration
 ): Promise<{ success: boolean }> => {
   await new Promise((res) => setTimeout(res, 500));
   return { success: true };
