@@ -15,7 +15,7 @@ import {
   sortableKeyboardCoordinates,
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
-import SortableEventCard from "./SortableEventCard";
+import SortableEventCard from "@/components/SortableEventCard";
 import { setOrder } from "@/store/eventsSlice";
 import { LoaderCircle } from "lucide-react";
 

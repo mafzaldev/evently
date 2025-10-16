@@ -3,6 +3,7 @@ import EventList from "./pages/EventList";
 import RegistrationForm from "./pages/RegistrationForm";
 import ConfirmationPage from "./pages/ConfirmationPage";
 import MyRegistrationsPage from "./pages/MyRegistrationsPage";
+import { Toaster } from "sonner";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/confirmation" element={<ConfirmationPage />} />
         <Route path="/my-registrations" element={<MyRegistrationsPage />} />
       </Routes>
+      <Toaster />
     </div>
   );
 }
