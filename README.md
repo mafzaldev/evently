@@ -24,7 +24,7 @@ This project is a React + TypeScript application built with Vite. It allows user
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/mafzaldev/event-registration
    ```
 2. Navigate to the project directory:
    ```bash
