@@ -1,4 +1,4 @@
-## Event Registration App
+## Evently App
 
 This project is a React + TypeScript application built with Vite. It allows users to register for events, reorder events via drag-and-drop, and view their registrations. The app uses Redux Toolkit for state management and localStorage for data persistence.
 

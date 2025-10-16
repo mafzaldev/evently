@@ -12,7 +12,7 @@ export const Navbar = () => {
           className="flex items-center gap-2 text-gray-800 hover:text-blue-600 transition-colors"
         >
           <CalendarDays className="text-blue-600" size={22} />
-          <span className="font-semibold text-lg">Event Registration</span>
+          <span className="font-semibold text-lg">Evently</span>
         </Link>
         <div className="flex items-center gap-6">
           <Link
