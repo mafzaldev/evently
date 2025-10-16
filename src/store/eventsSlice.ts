@@ -45,15 +45,21 @@ export const { setEvents, setOrder, setLoading, setError } =
   eventsSlice.actions;
 export default eventsSlice.reducer;
 
-export const initializeEvents = () => (dispatch: AppDispatch) => {
+export const initializeEvents = () => async (dispatch: AppDispatch) => {
+  dispatch(setLoading(true));
   const savedOrder = localStorage.getItem(LOCAL_STORAGE_KEY);
   if (savedOrder) {
     dispatch(setOrder(JSON.parse(savedOrder)));
   }
-  fetchEvents().then((events: Event[]) => {
+  try {
+    const events = await fetchEvents();
     dispatch(setEvents(events));
     if (!savedOrder) {
       dispatch(setOrder(events.map((e: Event) => e.id)));
     }
-  });
+  } catch (error) {
+    dispatch(setError("Failed to fetch events"));
+  } finally {
+    dispatch(setLoading(false));
+  }
 };

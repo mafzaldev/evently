@@ -17,11 +17,13 @@ import {
 } from "@dnd-kit/sortable";
 import SortableEventCard from "./SortableEventCard";
 import { setOrder } from "@/store/eventsSlice";
+import { LoaderCircle } from "lucide-react";
 
 const EventList: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const events = useSelector((state: RootState) => state.events.events);
   const order = useSelector((state: RootState) => state.events.order);
+  const loading = useSelector((state: RootState) => state.events.loading);
 
   const sensors = useSensors(
     useSensor(PointerSensor),
@@ -43,22 +45,28 @@ const EventList: React.FC = () => {
   return (
     <div className="max-w-2xl mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Events</h1>
-      <DndContext
-        sensors={sensors}
-        collisionDetection={closestCenter}
-        onDragEnd={handleDragEnd}
-      >
-        <SortableContext items={order} strategy={verticalListSortingStrategy}>
-          <div role="list" aria-label="Event list">
-            {order.map((id) => {
-              const event = events.find((e) => e.id === id);
-              return event ? (
-                <SortableEventCard key={event.id} event={event} />
-              ) : null;
-            })}
-          </div>
-        </SortableContext>
-      </DndContext>
+      {loading ? (
+        <div className="flex justify-center items-center h-32">
+          <LoaderCircle className="animate-spin" size={36} />
+        </div>
+      ) : (
+        <DndContext
+          sensors={sensors}
+          collisionDetection={closestCenter}
+          onDragEnd={handleDragEnd}
+        >
+          <SortableContext items={order} strategy={verticalListSortingStrategy}>
+            <div role="list" aria-label="Event list">
+              {order.map((id) => {
+                const event = events.find((e) => e.id === id);
+                return event ? (
+                  <SortableEventCard key={event.id} event={event} />
+                ) : null;
+              })}
+            </div>
+          </SortableContext>
+        </DndContext>
+      )}
     </div>
   );
 };
