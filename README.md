@@ -24,11 +24,11 @@ This project is a React + TypeScript application built with Vite. It allows user
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/mafzaldev/event-registration
+   git clone https://github.com/mafzaldev/evently
    ```
 2. Navigate to the project directory:
    ```bash
-   cd event-registration
+   cd evently
    ```
 3. Install dependencies:
    ```bash
