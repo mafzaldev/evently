@@ -3,9 +3,9 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 import type { Event } from "@/lib/interfaces";
 import type { AppDispatch } from "@/store/store";
 import { fetchEvents } from "@/api/mockApi";
-import { LOCAL_STORAGE_KEYS } from "@/lib/storageKeys";
+import { LOCAL_STORAGE_KEYS } from "@/lib/constants";
 
-const LOCAL_STORAGE_KEY = LOCAL_STORAGE_KEYS.EVENTS;
+const LOCAL_STORAGE_KEY = LOCAL_STORAGE_KEYS.EVENTS_ORDER;
 
 export interface EventsState {
   events: Event[];
